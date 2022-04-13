@@ -11,11 +11,12 @@ set -euo pipefail
 ##### this file happens at this level.                                         #####
 ####################################################################################
 
+sudo apt update
+
 ##### Yarn #####
 (echo ""; echo "##### Yarn #####"; echo "";)
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-sudo apt update
 sudo apt install -y yarn
 
 #### Node v14.x + npm #####
@@ -23,10 +24,6 @@ sudo apt install -y yarn
 sudo apt install ca-certificates
 curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 sudo apt-get install -y nodejs
-# sudo apt update
-# sudo apt install curl git -y
-# curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-# sudo apt install nodejs
 
 # #### Tailwind #####
 # (echo ""; echo "##### Tailwind #####"; echo "";)
@@ -37,7 +34,6 @@ sudo apt-get install -y nodejs
 npm install @apollo/client graphql
 sudo apt-get install libsecret-1-dev -y
 sudo npm install -g @graphprotocol/graph-cli
-
 
 #### Solidity & Tooling #####
 (echo ""; echo "##### Solidity #####"; echo "";)
