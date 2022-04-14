@@ -5,10 +5,7 @@ set -euo pipefail
 
 ####################################################################################
 ##### Specify software and dependencies that are required for this project     #####
-#####                                                                          #####
-##### Note:                                                                    #####
-##### The working directory is /home/brev/<PROJECT_FOLDER_NAME>. Execution of  #####
-##### this file happens at this level.                                         #####
+#####    Brev.dev documentation: https://docs.brev.dev                         #####
 ####################################################################################
 
 sudo apt update
@@ -46,3 +43,7 @@ npm install --save ethers
 (echo ""; echo "##### Hardhat #####"; echo "";)
 npm install --save-dev hardhat
 # https://hardhat.org/tutorial/creating-a-new-hardhat-project.html
+
+#### Project Setup #####
+(echo ""; echo "##### Project Setup #####"; echo "";)
+npm install 

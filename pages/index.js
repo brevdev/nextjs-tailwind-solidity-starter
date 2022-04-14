@@ -36,15 +36,14 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
+        Running on
         <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          href="https://brev.dev"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/brev.svg" alt="Brev.dev" width={108} height={72} />
-          </span>
+          {/* Running on{' '} */}
+          <Image src="/brev.svg" alt="Brev.dev" width={108} height={72} />
         </a>
       </footer>
     </div>
